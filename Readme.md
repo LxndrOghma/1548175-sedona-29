@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Александр Карпушин](https://up.htmlacademy.ru/htmlcss/29/user/1548175).
-* Наставник: `Неизвестно`.
+* Наставник: [Виктор Кан](https://htmlacademy.ru/profile/viktorkan).
 
 ---
 
