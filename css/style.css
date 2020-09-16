@@ -1,0 +1,209 @@
+/* Variables */
+
+:root {
+   --black: #000000;
+   --transparent-black: rgba(0, 0, 0, 0.30);
+   --dark: #333333;
+   --darker-blue: #5496BD;
+   --dark-blue: #669EC0;
+   --blue: #81b3d2;
+   --darker-brown: #503E33;
+   --dark-brown: #604E43;
+   --brown: #766357;
+   --white: #ffffff;
+   --transparent-white: rgba(255, 255, 255, 0.3);
+   --footer-white: rgba(255, 255, 255, 0.9);
+   --light-gray: #f2f2f2;
+   --gray: #eeeeee;
+   --dark-gray: #888888;
+   --extra-dark-gray: #666666;
+   --main-image-background: #6c859a;
+   --map-background: #e0edbc;
+}
+
+/* Global */
+
+body {
+    min-width: 1200px;
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: var(--dark);
+    text-transform: uppercase;
+    background-color: var(--white);
+}
+
+.page a {
+    text-decoration: none;
+}
+
+.page img {
+    max-width: 100%;
+    height: auto;
+}
+
+.main-navigation {
+    line-height: 26px;
+    color: var(--black);
+    background-color: transparent;
+    font-weight: 700;
+}
+
+.site-navigation {
+    list-style: none;
+}
+
+.site-navigation-link-active {
+    color: var(--brown);
+}
+
+/* User navigation */
+
+.site-navigation-link {
+    color: var(--black)
+}
+
+.site-navigation-link:hover {
+    color: var(--blue);
+}
+
+.site-navigation-link:active {
+    color: var(--transparent-black);
+}
+
+/* Main logo */
+
+.main-logo {
+    background-color: var(--main-image-background);
+}
+
+/* Features */
+
+.features-list {
+    list-style: none;
+}
+
+.features-item {
+    background-color: var(--gray);
+    text-align: center;
+}
+
+.features-item-header {
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--black);
+}
+
+.features-item-main {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.features-item-main-header {
+    color: var(--white);
+}
+
+/* Recommendations */
+
+.recommendations-list {
+    list-style: none;
+}
+
+.recommendations-item {
+    text-align: center;
+    background-color: var(--white);
+}
+
+.recommendations-item-heaeder {
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--black);
+}
+
+/* Map and booking */
+
+.map-and-booking {
+    text-align: center;
+    line-height: 24px;
+}
+
+.map-and-booking-header {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--black);
+}
+
+/* Search button */
+
+.search-button {
+    font: inherit;
+    font-size: 21px;
+    line-height: 26px;
+    text-align: center;
+    color: var(--white);
+    vertical-align: middle;
+    text-transform: uppercase;
+    background-color: var(--brown);
+    border: none;
+}
+
+.search-button:hover {
+    background-color: var(--dark-brown);
+}
+
+.search-button:active {
+    color: var(--transparent-white);
+    background-color: var(--darker-brown);
+}
+
+/* Map */
+
+.map {
+    background-color: var(--map-background);
+}
+
+/* Footer */
+
+.main-footer {
+    line-height: 26px;
+    color: var(--black);
+    background-color: var(--footer-white);
+}
+
+/* Contacts */
+
+.footer-contacts {
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.footer-phone {
+    color: inherit;
+}
+
+/* Socials */
+
+.footer-social {
+    text-align: center;
+}
+
+.footer-social-list {
+    list-style: none;
+}
+
+.social-button {
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+.social-button:hover {
+    background-color: var(--dark-blue);
+}
+
+.social-button:active {
+    color: var(--transparent-white);
+    background-color: var(--darker-blue);
+}
