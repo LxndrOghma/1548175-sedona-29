@@ -219,11 +219,19 @@ body {
   text-align: center;
 }
 
-.results-header {
+.result-header {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   color: var(--black);
+}
+
+.result-header:hover {
+  color: var(--blue);
+}
+
+.result-header:active {
+  color: var(--transparent-black);
 }
 
 .hotel-rating {
