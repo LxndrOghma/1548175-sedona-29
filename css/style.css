@@ -46,25 +46,77 @@ body {
   height: auto;
 }
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+/* Grid */
+
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* Main navigation */
+
 .main-navigation {
   line-height: 26px;
+  display: grid;
+  grid-template-columns: max-content 1fr;
   color: var(--black);
   background-color: transparent;
   font-weight: 700;
 }
 
+.main-navigation-logo {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  justify-self: center;
+  z-index: 1;
+}
+
 .site-navigation {
   list-style: none;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 72px;
+  margin: 0;
 }
 
 .site-navigation-link-active {
   color: var(--brown);
 }
 
+
+.left-group {
+  justify-self: start;
+}
+
+.right-group {
+  justify-self: end;
+}
+
+
 /* User navigation */
 
 .site-navigation-link {
-  color: var(--black)
+  color: var(--black);
 }
 
 .site-navigation-link:hover {
@@ -79,12 +131,32 @@ body {
 
 .main-logo {
   background-color: var(--main-image-background);
+  text-align: center;
+}
+
+.main-logo-img {
+  padding-top: 77px;
+  padding-bottom: 80px;
 }
 
 /* Features */
 
+.features {
+  display: grid;
+  grid-template-rows:216px 1fr;
+}
+
+.features-header {
+  text-align: center;
+}
+
 .features-list {
+  display: grid;
+  grid-template-rows : 256px 330px 256px 256px;
+  grid-template-columns: repeat(3, 1fr);
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .features-item {
@@ -99,8 +171,32 @@ body {
 }
 
 .features-item-main {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
   background-color: var(--blue);
   color: var(--white);
+
+}
+
+.features-item-recomendation {
+  grid-column: 1 / -1;
+}
+
+.features-item-img-left {
+  grid-column: 1 / 3;
+  grid-row: 1 / -1;
+}
+
+.features-item-img-right {
+  grid-column: 2 / -1;
+  grid-row: 1 / -1;
+}
+
+.features-item-description {
+  grid-row: 1/ -1;
+  align-self: center;
 }
 
 .features-item-main-header {
@@ -110,7 +206,12 @@ body {
 /* Recommendations */
 
 .recommendations-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 330px;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .recommendations-item {
@@ -127,8 +228,14 @@ body {
 /* Map and booking */
 
 .map-and-booking {
+  display: grid;
+  grid-template-rows: 291px min-content;
   text-align: center;
   line-height: 24px;
+}
+
+.booking-description {
+  align-self: stretch;
 }
 
 .map-and-booking-header {
@@ -267,9 +374,15 @@ body {
   background-color: var(--darker-brown);
   color: var(--transparent-white);
 }
+
 /* Footer */
 
 .main-footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 120px;
+  justify-items: center;
+  align-items: center;
   line-height: 26px;
   color: var(--black);
   background-color: var(--footer-white);
@@ -280,6 +393,7 @@ body {
 .footer-contacts {
   font-size: 21px;
   font-weight: 700;
+  text-align: center;
 }
 
 .footer-phone {
