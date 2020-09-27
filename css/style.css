@@ -34,7 +34,13 @@ body {
   font-weight: 400;
   color: var(--dark);
   text-transform: uppercase;
+  background-color: var(--light-gray);
+}
+
+.wrapper {
+  width: 1200px;
   background-color: var(--white);
+  margin: 0 auto;
 }
 
 .page a {
@@ -44,7 +50,18 @@ body {
 .page img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+/* Main navigation */
 
 .main-navigation {
   line-height: 26px;
@@ -53,7 +70,19 @@ body {
   font-weight: 700;
 }
 
+.main-navigation-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
 .site-navigation {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 15px 72px;
+  margin: 0;
+  position: relative;
   list-style: none;
 }
 
@@ -63,8 +92,16 @@ body {
 
 /* User navigation */
 
+.left-group {
+  justify-self: start;
+}
+
+.right-group {
+  justify-self: end;
+}
+
 .site-navigation-link {
-  color: var(--black)
+  color: var(--black);
 }
 
 .site-navigation-link:hover {
@@ -79,12 +116,22 @@ body {
 
 .main-logo {
   background-color: var(--main-image-background);
+  padding: 77px 371px 81px;
 }
+
 
 /* Features */
 
+.features-description {
+  text-align: center;
+  padding-top: 43px;
+  padding-bottom: 51px;
+}
+
 .features-list {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .features-item {
@@ -99,8 +146,17 @@ body {
 }
 
 .features-item-main {
+  display: grid;
   background-color: var(--blue);
   color: var(--white);
+}
+
+.img-left {
+  grid-template-columns: 1fr 2fr;
+}
+
+.img-right {
+  grid-template-columns: 2fr 1fr;
 }
 
 .features-item-main-header {
@@ -110,7 +166,11 @@ body {
 /* Recommendations */
 
 .recommendations-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .recommendations-item {
@@ -122,6 +182,16 @@ body {
   font-size: 21px;
   font-weight: 700;
   color: var(--black);
+}
+
+/* Additional features */
+
+.features-list-additional {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* Map and booking */
@@ -270,6 +340,9 @@ body {
 /* Footer */
 
 .main-footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
   line-height: 26px;
   color: var(--black);
   background-color: var(--footer-white);
