@@ -64,6 +64,7 @@ body {
 /* Main navigation */
 
 .main-navigation {
+  position: relative;
   line-height: 26px;
   color: var(--black);
   background-color: transparent;
@@ -82,7 +83,6 @@ body {
   grid-template-columns: repeat(4, 1fr);
   padding: 15px 72px;
   margin: 0;
-  position: relative;
   list-style: none;
 }
 
