@@ -166,16 +166,22 @@ body {
 /* Recommendations */
 
 .recommendations-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .recommendations-item {
+  width: 400px;
   text-align: center;
   background-color: var(--white);
+}
+
+.recommendations-item-description {
+  margin-right: 52px;
+  margin-left: 52px;
 }
 
 .recommendations-item-heaeder {
@@ -187,11 +193,15 @@ body {
 /* Additional features */
 
 .features-list-additional {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.features-item-additional {
+  width: 400px;
 }
 
 /* Map and booking */
@@ -405,10 +415,22 @@ body {
 }
 
 .footer-social-list {
+  display: flex;
+  height: 100%;
+  align-items: center;
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-social-item {
+  margin-right: 6px;
 }
 
 .social-button {
+  display: inline-block;
+  width: 46px;
+  height: 48px;
   color: var(--white);
   background-color: var(--blue);
 }
@@ -420,4 +442,11 @@ body {
 .social-button:active {
   color: var(--transparent-white);
   background-color: var(--darker-blue);
+}
+
+.footer-copyright {
+  display: flex;
+  width: 197px;
+  align-items: center;
+  justify-content: space-between;
 }
