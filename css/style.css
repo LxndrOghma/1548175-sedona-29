@@ -322,16 +322,23 @@ body {
 
 .sorting-results-item {
   display: grid;
-  grid-template-columns: 237px 258px 1fr;
+  grid-template-columns: 237px 1fr 1fr;
   border-bottom: 1px solid var(--transparent-black);
 }
 
 .result-img {
+  width: 135px;
+  height: 90px;
   padding: 30px 29px 30px 73px;
 }
 
 .result-description {
   text-align: left;
+}
+
+.result-description h3 {
+  margin-top: 24px;
+  margin-bottom: 7px;
 }
 
 .result-header {
@@ -349,6 +356,24 @@ body {
   color: var(--transparent-black);
 }
 
+.type-and-price {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.type-and-price p:first-child {
+  width: 116px;
+}
+
+.type-and-price p {
+  margin: 0;
+}
+
+.reslt-buttons {
+  display: flex;
+}
+
 .hotel-rating {
   height: 27px;
   width: 110px;
@@ -358,10 +383,22 @@ body {
   background-color: var(--light-gray);
 }
 
-.more-button {
+.result-buttons-group {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.result-button {
+  display: inline-block;
+  text-align: center;
+  padding: 3px 17px;
   color: var(--white);
-  background-color: var(--blue);
   font-weight: 700;
+}
+
+.more-button {
+  background-color: var(--blue);
+  margin-right: 6px;
 }
 
 .more-button:hover {
@@ -375,7 +412,6 @@ body {
 .book-button {
   color: var(--white);
   background-color: var(--brown);
-  font-weight: 700;
 }
 
 .book-button:hover {
