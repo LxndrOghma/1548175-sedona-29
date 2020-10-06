@@ -475,7 +475,9 @@ body {
 /* Rating */
 
 .hotel-rating {
+  /* при варианте через флексы justify-self здесь не нужен */
   justify-self: end;
+
   padding: 3px 12px 3px 15px;
   color: var(--extra-dark-gray);
   background-color: var(--light-gray);
@@ -486,6 +488,36 @@ body {
   align-items: center;
   position: relative;
 }
+
+/* Вариант звездочек через флексы */
+
+/* .test {
+  justify-self: end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.test::before {
+  display: block;
+  content: "";
+  height: 17px;
+  width: 92px;
+  background-image: url(../img/star.svg);
+  background-position: right;
+  background-repeat: space;
+}
+.test-four::before {
+  width: 92px;
+}
+
+.test-three::before {
+  width: 66px;
+}
+
+.test-two::before {
+  width: 42px;
+} */
 
 .hotel-rating::before {
   position: absolute;
