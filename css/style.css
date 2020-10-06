@@ -21,6 +21,7 @@
   --map-background: #e0edbc;
   --form-background: #47627c;
   --logo-gray: #bdbbbc;
+  --hotels-border: #e5e5e5;
 }
 
 /* Global */
@@ -318,18 +319,46 @@ body {
 .hotels-filter {
   background-color: var(--form-background);
   height: 217px;
-  padding-top: 27px;
 }
 
 /* Hotels sorting */
 
 .hotels-sorting {
+  border-bottom: 1px solid var(--hotels-border);
+}
+
+.hotels-sorting-grid {
   display: grid;
-  grid-template-columns: 190px 120px 1fr;
+  grid-template-columns: 117px 120px 1fr 34px;
   font-size: 12px;
   line-height: 18px;
   color: var(--black);
-  border-bottom: 1px solid var(--transparent-black);
+  margin: 0 73px;
+}
+
+ .arrow {
+  border: 0;
+  background-color: inherit;
+  outline: none;
+  padding: 0;
+}
+
+.arrow:hover path {
+  fill: var(--black);
+}
+
+.arrow:active path {
+  fill: var(--blue);
+}
+
+.active-arrow path {
+  fill: var(--blue);
+}
+
+.arrows-group {
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 .hotels-sorting-results-number {
@@ -361,6 +390,7 @@ body {
   border-bottom: 1px dotted var(--blue);
   padding: 0px;
   margin-right: 32px;
+  outline: none;
 }
 
 .sorting-button:hover {
@@ -390,7 +420,7 @@ body {
 .sorting-results-item {
   display: grid;
   grid-template-columns: 135px 1fr 1fr;
-  border-bottom: 1px solid var(--transparent-black);
+  border-bottom: 1px solid var(--hotels-border);
   padding: 30px 73px;
 }
 
@@ -442,15 +472,45 @@ body {
   display: flex;
 }
 
+/* Rating */
+
 .hotel-rating {
-  height: 27px;
-  width: 110px;
   justify-self: end;
+  padding: 3px 12px 3px 15px;
   color: var(--extra-dark-gray);
   background-color: var(--light-gray);
   margin-top: auto;
   margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
+
+.hotel-rating::before {
+  position: absolute;
+  content: "";
+  background-position: right;
+  bottom: 74px;
+  right: 0;
+  height: 17px;
+  background-image: url(../img/star.svg);
+  background-repeat: space;
+}
+
+.four-stars::before {
+  width: 92px;
+}
+
+.three-stars::before {
+  width: 66px;
+}
+
+.two-stars::before {
+  width: 42px;
+}
+
+/* Result buttons */
 
 .result-buttons-group {
   display: flex;
@@ -492,7 +552,7 @@ body {
 }
 /* Footer */
 
-.main-footer {
+.page-footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
@@ -500,6 +560,10 @@ body {
   line-height: 26px;
   color: var(--black);
   background-color: var(--footer-white);
+  margin: 0 73px;
+}
+
+.main-footer {
   position: absolute;
   width: 100%;
   bottom: 0px;
