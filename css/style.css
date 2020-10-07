@@ -474,9 +474,15 @@ body {
 
 /* Rating */
 
-.hotel-rating {
-  /* при варианте через флексы justify-self здесь не нужен */
+.rating-group {
   justify-self: end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.hotel-rating {
 
   padding: 3px 12px 3px 15px;
   color: var(--extra-dark-gray);
@@ -486,7 +492,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
 }
 
 /* Вариант звездочек через флексы */
@@ -519,7 +524,9 @@ body {
   width: 42px;
 } */
 
-.hotel-rating::before {
+/* Вариант звездочек через абсолютное позиционирование  */
+
+/* .hotel-rating::before {
   position: absolute;
   content: "";
   background-position: right;
@@ -540,7 +547,7 @@ body {
 
 .two-stars::before {
   width: 42px;
-}
+} */
 
 /* Result buttons */
 
@@ -592,7 +599,6 @@ body {
   line-height: 26px;
   color: var(--black);
   background-color: var(--footer-white);
-  margin: 0 73px;
 }
 
 .main-footer {
