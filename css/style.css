@@ -231,7 +231,7 @@ body {
   width: 400px;
   text-align: center;
   padding-top: 159px;
-  margin-bottom: 83px;
+  margin-bottom: 81px;
   background-color: var(--white);
 }
 
@@ -614,6 +614,26 @@ body {
   left: -39px;
 }
 
+.hotels-filter-checkbox:focus + label:before {
+  position: absolute;
+  content: "";
+  height: 23px;
+  width: 23px;
+  background-image: url(../img/checkbox-off.svg);
+  left: -39px;
+  outline: 3px solid var(--black);
+}
+
+.hotels-filter-checkbox:checked:focus + label:before {
+  position: absolute;
+  content: "";
+  height: 23px;
+  width: 27px;
+  background-image: url(../img/checkbox-on.svg);
+  left: -39px;
+  outline: 3px solid var(--black);
+}
+
 .hotels-filter-checkbox:disabled + label:before {
   position: absolute;
   content: "";
@@ -811,7 +831,6 @@ body {
   border-bottom: 1px dotted var(--blue);
   padding: 0px;
   margin-right: 31px;
-  outline: none;
 }
 
 .sorting-button:hover {
