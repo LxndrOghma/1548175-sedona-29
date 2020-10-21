@@ -846,10 +846,11 @@ body {
   border-bottom: none;
 }
 
-.active-button {
+.active-button,
+.active-button:hover,
+.active-button:active {
   color: var(--blue);
   border-bottom: none;
-
 }
 
 /* Sorting results */

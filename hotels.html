@@ -78,8 +78,8 @@
                 <div class="scale">
                   <div class="bar"></div>
                 </div>
-                <div class="toggle toggle-min" tabindex="0"></div>
-                <div class="toggle toggle-max" tabindex="0"></div>
+                <div class="toggle toggle-min" tabindex="0" aria-label="Минимальная стоимость в сутки"></div>
+                <div class="toggle toggle-max" tabindex="0" aria-label="Максимальная стоимость в сутки"></div>
               </div>
             </div>
             <button class="filter-submit" type="submit">Показать</button>
@@ -92,21 +92,21 @@
           <p class="hotels-sorting-results-number">Найдено: 3</p>
           <p class="sorting-group">Сортировка:</p>
           <div class="sorting-buttons-group">
-            <button class="sorting-button sorting-by-price active-button" disabled="disabled">По цене</button>
-            <button class="sorting-button sorting-by-type">По типу</button>
-            <button class="sorting-button sorting-by-rating">По рейтингу</button>
+            <a class="sorting-button sorting-by-price active-button" href="">По цене</a>
+            <a class="sorting-button sorting-by-type" href="">По типу</a>
+            <a class="sorting-button sorting-by-rating" href="">По рейтингу</a>
           </div>
           <div class="arrows-group">
-            <button class="arrow" type="button">
+            <a class="arrow" href="">
               <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
               </svg>
-            </button>
-            <button class="arrow active-arrow" type="button">
+            </a>
+            <a class="arrow active-arrow" href="">
               <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.5 10L0 0H11" fill="#CACACA"/>
               </svg>
-            </button>
+            </a>
           </div>
         </div>
       </section>
