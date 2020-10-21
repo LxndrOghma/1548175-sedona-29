@@ -17,11 +17,14 @@ try {
   isStorageSupport = false;
 }
 
+searchField.classList.add ("form-off");
+
 searchButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   searchField.classList.toggle ("form-show");
+  searchField.classList.toggle ("form-off");
   searchForm.classList.toggle ("form-animate-open");
-  searchField.classList.remove("form-error");
+  searchForm.classList.remove("form-error");
 
   if (storageAdults) {
     adultsAmmount.value = storageAdults;

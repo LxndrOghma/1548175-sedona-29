@@ -361,7 +361,6 @@ body {
 /* Searching form */
 
 .searching-form-wrapper {
-  display: none;
   position: absolute;
   content: "";
   width: 568px;
@@ -520,6 +519,11 @@ body {
   background-color: var(--map-background);
   height: 593px;
   background-image: url(../img/map.png);
+}
+
+.map iframe {
+  border: 0;
+  width: 100%;
 }
 
 /* Hotels Filter */
@@ -1086,6 +1090,10 @@ body {
 }
 
 /* JavaScript */
+
+.form-off {
+  display: none;
+}
 
 .form-show {
   display: block;
