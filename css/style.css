@@ -149,7 +149,7 @@ body {
           transform: translateX(-50%) translateY(-100%);
   left: 50%;
   top: 100%;
-  background-image: url(../img/shape.svg);
+  background-image: url(../img/main-shape.svg);
   z-index: 1;
 }
 
